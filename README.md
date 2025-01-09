@@ -1,2 +1,2 @@
 # TextBasedRPG
-My text based RPG I am working on, just to get the hang of Java and user input.
+A small project just to get the hang of Java and focusing on larger projects.
