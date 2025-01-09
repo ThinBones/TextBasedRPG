@@ -175,7 +175,10 @@ public class Main {
             }
             else {
                 Spell tempSpell = player.getSpell(resp);
-                player.castSpell(tempSpell);
+
+                // fix this, target needs to be able to vary
+                // between player character & enemy character
+                player.castSpell(tempSpell, null);
                 done = true;
             }
         }
