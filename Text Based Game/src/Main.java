@@ -7,15 +7,14 @@ public class Main {
     private static Enemy   currentEnemy;
     private static boolean gameOver;
     private static Inventory inventory;
-    private static Item currentLoot;
-    private static LootGenerator lootGen;
+    // private static LootGenerator lootGen;
 
     public static void main(String[] args) {
         scan = new Scanner(System.in);
         player = new Player("Player", 20, 20, 5, 50);
         gameOver = false;
         inventory = new Inventory();
-        lootGen = new LootGenerator();
+        // lootGen = new LootGenerator();
 
         while (!gameOver) {
             initializeMenus();
@@ -35,7 +34,7 @@ public class Main {
         }
         else {
             System.out.println("You found loot!");
-            generateLoot();
+            // generateLoot();
         }
     }
 
@@ -100,25 +99,25 @@ public class Main {
     }
 
 
-    public static void generateLoot() {
-        int randomLoot = (int) ((Math.random() * 100) + 1);
+    // public static void generateLoot() {
+    //     int randomLoot = (int) ((Math.random() * 100) + 1);
 
-        if (randomLoot < 50) {
-            currentLoot = lootGen.generateCommon();
-        }
-        if (randomLoot >= 50 && randomLoot < 75) {
-            lootGen.generateUncommon();
-        }
-        if (randomLoot >= 75 && randomLoot < 90) {
-            lootGen.generateRare();
-        }
-        if (randomLoot >= 90 && randomLoot < 100) {
-            lootGen.generateMythic();
-        }
-        if (randomLoot == 100) {
-            lootGen.generateLegendary();
-        }
-    }
+    //     if (randomLoot < 50) {
+    //         currentLoot = lootGen.generateCommon();
+    //     }
+    //     if (randomLoot >= 50 && randomLoot < 75) {
+    //         lootGen.generateUncommon();
+    //     }
+    //     if (randomLoot >= 75 && randomLoot < 90) {
+    //         lootGen.generateRare();
+    //     }
+    //     if (randomLoot >= 90 && randomLoot < 100) {
+    //         lootGen.generateMythic();
+    //     }
+    //     if (randomLoot == 100) {
+    //         lootGen.generateLegendary();
+    //     }
+    // }
 
     public static void checkWeight() {
         while (inventory.totalWeight() > player.getCarry()) {
